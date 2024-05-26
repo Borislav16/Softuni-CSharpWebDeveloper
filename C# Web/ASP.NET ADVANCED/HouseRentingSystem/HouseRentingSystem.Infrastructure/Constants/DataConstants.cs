@@ -14,8 +14,8 @@
         public const int HouseDescriptionMinLength = 50; 
         public const int HouseDescriptionMaxLength = 500;
         
-        public const string HousePricePerMonthMin = "0.00";
-        public const string HousePricePerMonthMax = "2000.00";
+        public const string HousePricePerMonthMin = "0";
+        public const string HousePricePerMonthMax = "2000";
 
         public const int AgentPhoneMinLength = 7;
         public const int AgentPhoneMaxLength = 15;
