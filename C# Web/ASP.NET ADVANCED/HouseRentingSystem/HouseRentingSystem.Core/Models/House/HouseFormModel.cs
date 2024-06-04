@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using HouseRentingSystem.Core.Contracts;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HouseRentingSystem.Infrastructure.Constants.DataConstants;
 using static HouseRentingSystem.Core.Constants.MessageConstants;
+using static HouseRentingSystem.Infrastructure.Constants.DataConstants;
 
 namespace HouseRentingSystem.Core.Models.House
 {
-    public class HouseFormModel
+    public class HouseFormModel : IHouseModel
     {
         [Required(ErrorMessage = RequiredMessage)]
         [StringLength(HouseTitleMaxLength,
