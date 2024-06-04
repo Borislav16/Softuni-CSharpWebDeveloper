@@ -9,9 +9,9 @@ namespace HouseRentingSystem.Infrastructure.Data
 {
     public class HomeController : BaseController
     {
-        private readonly IHouseSevice houseSevice;
+        private readonly IHouseService houseSevice;
 
-        public HomeController(IHouseSevice _houseService)
+        public HomeController(IHouseService _houseService)
         {
             houseSevice = _houseService;
         }
@@ -27,9 +27,20 @@ namespace HouseRentingSystem.Infrastructure.Data
 
         [AllowAnonymous]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(int statusCode)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+            if (statusCode == 400)
+            {
+                return View("Error400");
+            }
+
+            if (statusCode == 401)
+            {
+                return View("Error401");
+            }
+
+            return View();
         }
     }
 }
