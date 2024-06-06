@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using HouseRentingSystem.Infrastructure.Data.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -9,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace HouseRentingSystem.Infrastructure.Data.SeedDb
 {
-    public class UserConfiguration : IEntityTypeConfiguration<IdentityUser>
+    public class UserConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {
-        public void Configure(EntityTypeBuilder<IdentityUser> builder)
+        public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
             var data = new SeedData();
 
-            builder.HasData(new IdentityUser[] { data.AgentUser, data.GuestUser });
+            builder.HasData(new ApplicationUser[] { data.AgentUser, data.GuestUser, data.AdminUser });
         }
     }
 }
