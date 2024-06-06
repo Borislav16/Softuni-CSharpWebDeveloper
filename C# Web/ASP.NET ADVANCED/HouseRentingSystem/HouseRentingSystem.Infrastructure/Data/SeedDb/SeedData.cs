@@ -5,16 +5,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HouseRentingSystem.Infrastructure.Constants.CustomClaims;
 
 namespace HouseRentingSystem.Infrastructure.Data.SeedDb
 {
     public class SeedData
     {
-        public IdentityUser AgentUser { get; set; }
+        public ApplicationUser AgentUser { get; set; }
 
-        public IdentityUser GuestUser { get; set; }
+        public ApplicationUser GuestUser { get; set; }
+
+        public ApplicationUser AdminUser { get; set; }
+
+        public IdentityUserClaim<string> AgentUserClaim { get; set; }
+
+        public IdentityUserClaim<string> GuestUserClaim { get; set; }
+        
+        public IdentityUserClaim<string> AdminUserClaim { get; set; }
 
         public Agent Agent { get; set; }
+
+        public Agent AdminAgent { get; set; }
 
         public Category CottageCategory { get; set; }
 
@@ -39,31 +50,73 @@ namespace HouseRentingSystem.Infrastructure.Data.SeedDb
 
         private void SeedUsers()
         {
-            var hasher = new PasswordHasher<IdentityUser>();
+            var hasher = new PasswordHasher<ApplicationUser>();
 
-            AgentUser = new IdentityUser()
+            AgentUser = new ApplicationUser()
             {
                 Id = "dea12856-c198-4129-b3f3-b893d8395082",
                 UserName = "agent@mail.com",
                 NormalizedUserName = "agent@mail.com",
                 Email = "agent@mail.com",
-                NormalizedEmail = "agent@mail.com"
+                NormalizedEmail = "agent@mail.com",
+                FirstName = "Agent",
+                LastName = "Agentov"
+            };
+            AgentUserClaim = new IdentityUserClaim<string>()
+            {
+                Id = 1,
+                ClaimType = UserFullNameClaim,
+                ClaimValue = "Agent Agentov",
+                UserId = "dea12856-c198-4129-b3f3-b893d8395082",
             };
 
             AgentUser.PasswordHash =
                  hasher.HashPassword(AgentUser, "agent123");
 
-            GuestUser = new IdentityUser()
+            GuestUser = new ApplicationUser()
             {
                 Id = "6d5800ce-d726-4fc8-83d9-d6b3ac1f591e",
                 UserName = "guest@mail.com",
                 NormalizedUserName = "guest@mail.com",
                 Email = "guest@mail.com",
-                NormalizedEmail = "guest@mail.com"
+                NormalizedEmail = "guest@mail.com",
+                FirstName = "Guest",
+                LastName = "Guestov"
+            };
+
+            GuestUserClaim = new IdentityUserClaim<string>()
+            {
+                Id = 2,
+                ClaimType = UserFullNameClaim,
+                ClaimValue = "Guest Guestov",
+                UserId = "6d5800ce-d726-4fc8-83d9-d6b3ac1f591e",
             };
 
             GuestUser.PasswordHash =
             hasher.HashPassword(AgentUser, "guest123");
+
+            AdminUser = new ApplicationUser()
+            {
+                Id = "bcb4f072-ecca-43c9-ab26-c060c6f364e4",
+                UserName = "admin@mail.com",
+                NormalizedUserName = "ADMIN@MAIL.COM",
+                Email = "admin@mail.com",
+                NormalizedEmail = "ADMIN@MAIL.COM",
+                FirstName = "Great",
+                LastName = "Admin"
+            };
+
+            AdminUserClaim = new IdentityUserClaim<string>()
+            {
+                Id = 3,
+                ClaimType = UserFullNameClaim,
+                ClaimValue = "Great Admin",
+                UserId = "bcb4f072-ecca-43c9-ab26-c060c6f364e4",
+            };
+
+            AdminUser.PasswordHash =
+            hasher.HashPassword(AdminUser, "admin 123");
+
         }
 
         private void SeedAgent()
@@ -73,6 +126,13 @@ namespace HouseRentingSystem.Infrastructure.Data.SeedDb
                 Id = 1,
                 PhoneNumber = "+359888888888",
                 UserId = AgentUser.Id
+            };
+
+            AdminAgent = new Agent()
+            {
+                Id = 3,
+                PhoneNumber = "+359888888887",
+                UserId = AdminUser.Id
             };
         }
 
