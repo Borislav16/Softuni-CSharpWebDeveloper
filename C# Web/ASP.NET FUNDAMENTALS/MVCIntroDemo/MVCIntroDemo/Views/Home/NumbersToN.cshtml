@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = $"Numbers 1... {ViewData["Count"]}";
+    int count = (int)ViewData["Count"];
+}
+
+@if (count > 0)
+{
+    <h2>Nums 1...@count</h2>
+    <ul>
+        @for (int i = 0; i < count; i++)
+        {
+            <li>@(i + 1)</li>
+        }
+    </ul>
+}
+else
+{
+    <h2>Nums 1... N</h2>
+}
+
+<form asp-controller="Home" asp-action="NumbersToN" method="post">
+    <div class="row">
+        <div class="col-2">
+            <input type="number" min="0" step="1" name="count"/>
+        </div>
+        <div>
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
