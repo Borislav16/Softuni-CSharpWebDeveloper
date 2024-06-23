@@ -1,0 +1,33 @@
+article {
+    padding: 5px 15px;
+    width: 750px;
+    border: 1px solid #b2ad7d;
+    margin: 15px 10px;
+    background-color: #e4e978;
+}
+
+h2{
+    color: #4c7658;
+}
+
+header {
+    color: #5c6e91;
+}
+
+section {
+    padding: 5px 15px;
+    width: 700px;
+    border: 1px solid #b2ad7d;
+    margin: 15px 10px;
+    background-color: #f2f4c0;
+}
+
+#second h1{
+    color: #4c7658;
+}
+
+#second p,
+#third p {
+    font-style: italic;
+    color: #4c7658;
+}
