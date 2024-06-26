@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&family=PT+Sans&family=PT+Serif&family=Raleway:ital,wght@0,300;1,200&display=swap');
+
+body {
+    font-family: Montserrat, sans-serif;
+    padding: 16px;
+}
+
+th {
+    background-color: lightblue;
+}
+
+tr td {
+    border: 1px solid #ccc;
+    width: 144px;
+    height: 32px;
+    padding-left: 5px;
+}
+
+blockquote p {
+    float: right;
+    padding-top: 1em;
+}
+
+.content {
+    margin: 2em;
+    border-left: 2px solid #878585;
+}
