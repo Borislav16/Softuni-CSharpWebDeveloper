@@ -1,0 +1,28 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    padding-right: 5px;
+}
+
+.check i{
+    font-size: 25px;
+    color: #2fcc71;
+}
+
+.star i {
+    font-size: 25px;
+    color: coral;
+}
+
+.contact i {
+    font-size: 25px;
+    color: #3498da;
+}
