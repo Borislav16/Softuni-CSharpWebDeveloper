@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 1em;
+
+}
+
+li {
+    display: block;
+}
+
+ a{
+    display: grid;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 2em;
+    border-radius: 50%;
+    overflow: hidden;
+    color: black;
+    background: rgb(212, 210, 210);
+    place-items: center;
+    text-decoration: none;
+    line-height: 1;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+a i {
+    display: block;
+}
+
+.facebook:hover {
+    background: rgb(212, 210, 210);
+    color: blue;
+}
+.twitter:hover {
+    background: rgb(212, 210, 210);
+    color: rgb(53, 224, 236);
+}
+.google:hover {
+    background: rgb(212, 210, 210);
+    color: rgb(244, 85, 46);
+}
+.linkedin:hover {
+    background: rgb(212, 210, 210);
+    color: rgb(41, 124, 180);
+}
+.instagram:hover {
+    background: rgb(212, 210, 210);
+    color: rgb(234, 49, 12);
+}
