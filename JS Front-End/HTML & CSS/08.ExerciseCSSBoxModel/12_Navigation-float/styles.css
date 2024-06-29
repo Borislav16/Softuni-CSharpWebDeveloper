@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Georgia, serif
+}
+
+body {
+    background: rgb(238, 238, 238);
+    margin: 4em
+}
+
+img {
+    background: rgb(255, 255, 255);
+    border: 5px solid #000;
+    padding: 0.5em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 102, 0);
+}
+
+p {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.site-header {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+}
+
+.site-header nav {
+    display: flex;
+    width: 25em;
+}
+
+.site-header nav ul li {
+    display: inline-block;
+    padding: 0.5em;
+    padding-top: 1em;
+    list-style: none;
+}
+
+.site-header p {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 0.3em 0 0.3em 0;
+    text-transform: uppercase;
+}
+
+.site {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main {
+    width: 70%;
+    padding-top: 2em;
+}
+
+.article-one img {
+    float: right;
+    margin-left: 1.3em;
+    margin-bottom: 1.3em;
+    margin-top: -1.7em;
+}
+
+.article-three img {
+    float: left;
+    margin-right: 1.3em;
+    margin-bottom: 0.3em;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.blog-content p {
+    width: 100%;
+}
+
+.blog-content blockquote p {
+    text-align: right;
+}
+
+blockquote {
+    width: 80%;
+    border-left: 2px solid rgb(118, 118, 118);
+    padding-left: 1.3em;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: rgb(118, 118, 118);
+}
+
+.aside {
+    width: 25%;
+}
+
+.aside nav {
+    padding-left: 2em;
+}
+
+.aside section {
+    padding-top: 1.5em;
+}
