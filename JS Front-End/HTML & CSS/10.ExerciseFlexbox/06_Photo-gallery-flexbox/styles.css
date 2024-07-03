@@ -1,0 +1,20 @@
+body,
+ul,
+li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    justify-content: space-evenly;
+    gap: 22px;
+}
+
+li {
+    background-color: #fff;
+    border: 0.4rem solid #000;
+    padding: 1.5rem;
+    margin-bottom: 1.5em;
+    align-items: center;
+    box-shadow: 5px 10px 18px rgb(0, 0, 0, 0.3);
+}
