@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+}
+
+.container {
+    display: flex;
+}
+
+img {
+    margin-left: 0.9em;
+    border: 0 solid rgb(238, 238, 238);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.5)0px 0px 20px;
+}
+
+.image-1, .image-3,.image-4 {
+    height: 300px;
+    width: 120px;
+}
+
+.image-2 {
+    height: 300px;
+}
