@@ -1,0 +1,10 @@
+@media screen and (max-width: 360px) {
+  .card {
+    container-type: inline-size;
+  }
+}
+
+
+.card h2 {
+  font-size: 1em;
+}
